@@ -6,7 +6,7 @@ import { editedTaskState } from '@/util/atoms'
 import { EditedTask } from 'types'
 import { useResetRecoilState } from 'recoil'
 
-const useMutateTask = () => {
+export const useMutateTask = () => {
   const queryClient = useQueryClient()
   const router = useRouter()
   const reset = useResetRecoilState(editedTaskState)
