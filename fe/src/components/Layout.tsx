@@ -1,10 +1,18 @@
+import Head from 'next/head'
 import { FC, ReactNode } from 'react'
 
-type PropsTypes = {
+type Props = {
   title: string
-  chidren: ReactNode
+  children?: ReactNode | undefined
 }
 
-export const Layout: FC<PropsTypes> = (children, title = 'Nextjs') => {
-  return <div></div>
+export const Layout: FC<Props> = ({ children, title = 'To do...' }) => {
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center">
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <main>{children}</main>
+    </div>
+  )
 }
