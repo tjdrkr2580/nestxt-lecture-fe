@@ -3,7 +3,7 @@ import { FC, ReactNode } from 'react'
 
 type Props = {
   title: string
-  children?: ReactNode | undefined
+  children?: ReactNode
 }
 
 export const Layout: FC<Props> = ({ children, title = 'To do...' }) => {
